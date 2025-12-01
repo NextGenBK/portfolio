@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Game - Bayanda Khoza</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #0a0a0a;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .game-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        #gameCanvas {
+            border: 3px solid #8b5cf6;
+            border-radius: 10px;
+            background: #111;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+        
+        .game-info {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            border: 1px solid #2d2d2d;
+        }
+        
+        .controls {
+            margin: 15px 0;
+            color: #94a3b8;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1> Pac-Man Game</h1>
+        
+        <div class="game-info">
+            <h2>Score: <span id="score">0</span></h2>
+            <p>Use Arrow Keys to move Pac-Man. Eat all the dots while avoiding ghosts!</p>
+        </div>
+        
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        
+        <div class="controls">
+            <button class="btn" onclick="startGame()">Start Game</button>
+            <button class="btn" onclick="resetGame()">Reset Game</button>
+            <p>Controls: ↑ ↓ ← → Arrow Keys</p>
+        </div>
+    </div>
+
+    <script src="pacman-game.js"></script>
+</body>
+</html>
