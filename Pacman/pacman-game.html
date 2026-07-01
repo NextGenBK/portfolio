@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man — Bayanda Khoza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --bg:      #05050a;
+            --bg-2:    #0d0d15;
+            --border:  rgba(255,255,255,0.07);
+            --purple:  #8b5cf6;
+            --cyan:    #22d3ee;
+            --green:   #34d399;
+            --yellow:  #fbbf24;
+            --text:    #f1f5f9;
+            --muted:   #64748b;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        /* Back link */
+        .back-link {
+            align-self: flex-start;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.4rem 0.9rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            transition: all 0.2s;
+        }
+        .back-link:hover { color: var(--text); border-color: rgba(255,255,255,0.15); }
+        .back-link svg { width:14px; height:14px; }
+
+        /* Header */
+        .game-header { text-align:center; margin-bottom: 1.5rem; }
+        .game-header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 30%, var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.3rem;
+        }
+        .game-header p { color: var(--muted); font-size: 0.85rem; }
+
+        /* HUD */
+        .hud {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            padding: 0.75rem 1.25rem;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .hud-item { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
+        .hud-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+        .hud-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--purple), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .lives-display { display: flex; gap: 0.3rem; align-items: center; }
+        .life-icon { font-size: 1.1rem; transition: transform 0.2s; }
+        .life-icon.lost { opacity: 0.2; transform: scale(0.8); }
+
+        /* Canvas wrapper */
+        .canvas-wrapper {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(139,92,246,0.3), 0 25px 60px rgba(0,0,0,0.5), 0 0 60px rgba(139,92,246,0.1);
+        }
+
+        #gameCanvas {
+            display: block;
+            background: #08080f;
+            max-width: 100%;
+        }
+
+        /* Overlay */
+        .game-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(5,5,10,0.88);
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            transition: opacity 0.3s;
+        }
+        .game-overlay.hidden { opacity:0; pointer-events:none; }
+
+        .overlay-emoji { font-size: 3.5rem; animation: bounce 0.8s ease infinite alternate; }
+        @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+
+        .overlay-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .overlay-sub { color: var(--muted); font-size: 0.9rem; text-align: center; max-width: 280px; }
+        .overlay-score {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--yellow);
+        }
+
+        /* Buttons */
+        .btn-row { display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center; margin-top: 0.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.65rem 1.4rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--purple), var(--cyan));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(139,92,246,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139,92,246,0.4); }
+        .btn-ghost {
+            background: transparent;
+            color: var(--muted);
+            border: 1px solid var(--border);
+        }
+        .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+        /* Mobile controls */
+        .mobile-controls {
+            margin-top: 1.25rem;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        @media (max-width: 680px) or (pointer: coarse) {
+            .mobile-controls { display: flex; }
+        }
+
+        .dpad-row { display: flex; gap: 0.4rem; }
+
+        .dpad-btn {
+            width: 54px;
+            height: 54px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .dpad-btn:active {
+            background: rgba(139,92,246,0.2);
+            border-color: var(--purple);
+            transform: scale(0.95);
+        }
+        .dpad-spacer { width: 54px; height: 54px; }
+
+        /* Controls hint */
+        .controls-hint {
+            margin-top: 1.25rem;
+            display: flex;
+            gap: 1.5rem;
+            color: var(--muted);
+            font-size: 0.78rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .controls-hint span { display:flex; align-items:center; gap:0.3rem; }
+        .key {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            padding: 0.15rem 0.4rem;
+            font-size: 0.72rem;
+            color: var(--text);
+            font-weight: 600;
+            min-width: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+        Back to Portfolio
+    </a>
+
+    <div class="game-header">
+        <h1>🕹️ Pac-Man</h1>
+        <p>Eat all the dots — avoid the ghosts!</p>
+    </div>
+
+    <!-- HUD -->
+    <div class="hud">
+        <div class="hud-item">
+            <span class="hud-label">Score</span>
+            <span class="hud-value" id="score">0</span>
+        </div>
+        <div class="hud-item">
+            <span class="hud-label">High Score</span>
+            <span class="hud-value" id="highScore">0</span>
+        </div>
+        <div class="hud-item">
+            <span class="hud-label">Lives</span>
+            <div class="lives-display" id="livesDisplay">
+                <span class="life-icon">😀</span>
+                <span class="life-icon">😀</span>
+                <span class="life-icon">😀</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas -->
+    <div class="canvas-wrapper">
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+        <!-- Start overlay -->
+        <div class="game-overlay" id="overlay">
+            <div class="overlay-emoji" id="overlayEmoji">👻</div>
+            <div class="overlay-title" id="overlayTitle">Pac-Man</div>
+            <div class="overlay-sub" id="overlaySub">Eat all the dots while avoiding the ghosts. Good luck!</div>
+            <div class="overlay-score" id="overlayScore" style="display:none"></div>
+            <div class="btn-row">
+                <button class="btn btn-primary" id="startBtn">▶ Start Game</button>
+                <button class="btn btn-ghost" id="resetBtn" style="display:none">↺ Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile d-pad -->
+    <div class="mobile-controls" id="mobileControls">
+        <div class="dpad-row">
+            <div class="dpad-spacer"></div>
+            <button class="dpad-btn" data-dir="up">↑</button>
+            <div class="dpad-spacer"></div>
+        </div>
+        <div class="dpad-row">
+            <button class="dpad-btn" data-dir="left">←</button>
+            <button class="dpad-btn" data-dir="down">↓</button>
+            <button class="dpad-btn" data-dir="right">→</button>
+        </div>
+    </div>
+
+    <!-- Controls hint -->
+    <div class="controls-hint">
+        <span><span class="key">↑</span><span class="key">↓</span><span class="key">←</span><span class="key">→</span> Move</span>
+        <span><span class="key">P</span> Pause</span>
+        <span><span class="key">R</span> Restart</span>
+    </div>
+
+    <script src="pacman-game.js"></script>
+    <script>
+        // Enhanced overlay/UI controller
+        const overlay     = document.getElementById('overlay');
+        const overlayEmoji= document.getElementById('overlayEmoji');
+        const overlayTitle= document.getElementById('overlayTitle');
+        const overlaySub  = document.getElementById('overlaySub');
+        const overlayScore= document.getElementById('overlayScore');
+        const startBtn    = document.getElementById('startBtn');
+        const resetBtn    = document.getElementById('resetBtn');
+        const scoreEl     = document.getElementById('score');
+        const highScoreEl = document.getElementById('highScore');
+        const livesEl     = document.getElementById('livesDisplay');
+
+        let highScore = 0;
+        let lives = 3;
+        let paused = false;
+
+        function updateLivesUI() {
+            const icons = livesEl.querySelectorAll('.life-icon');
+            icons.forEach((icon, i) => {
+                icon.classList.toggle('lost', i >= lives);
+            });
+        }
+
+        function showOverlay(emoji, title, sub, score, showReset) {
+            overlayEmoji.textContent = emoji;
+            overlayTitle.textContent = title;
+            overlaySub.textContent   = sub;
+            if (score !== null) {
+                overlayScore.style.display = 'block';
+                overlayScore.textContent   = '🏆 Score: ' + score;
+            } else {
+                overlayScore.style.display = 'none';
+            }
+            startBtn.style.display = showReset ? 'none' : 'flex';
+            resetBtn.style.display = showReset ? 'flex' : 'none';
+            overlay.classList.remove('hidden');
+        }
+
+        function hideOverlay() {
+            overlay.classList.add('hidden');
+        }
+
+        // Hook into game events
+        startBtn.addEventListener('click', () => {
+            lives = 3;
+            updateLivesUI();
+            hideOverlay();
+            initGame();
+            startGame();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            lives = 3;
+            updateLivesUI();
+            hideOverlay();
+            initGame();
+            startGame();
+        });
+
+        // Mobile d-pad
+        document.querySelectorAll('.dpad-btn').forEach(btn => {
+            const fire = () => { pacman.direction = btn.dataset.dir; };
+            btn.addEventListener('touchstart', e => { e.preventDefault(); fire(); }, { passive: false });
+            btn.addEventListener('mousedown',  fire);
+        });
+
+        // Show mobile controls on touch devices
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            document.getElementById('mobileControls').style.display = 'flex';
+        }
+
+        // Pause
+        document.addEventListener('keydown', e => {
+            if (e.key === 'p' || e.key === 'P') {
+                paused = !paused;
+                if (!paused && gameRunning) gameLoop();
+            }
+            if (e.key === 'r' || e.key === 'R') {
+                resetBtn.click();
+            }
+        });
+
+        // Patch original game functions to use new UI
+        const _gameOver = gameOver;
+        window.gameOver = function() {
+            gameRunning = false;
+            lives--;
+            updateLivesUI();
+            const currentScore = parseInt(scoreEl.textContent) || 0;
+            if (currentScore > highScore) {
+                highScore = currentScore;
+                highScoreEl.textContent = highScore;
+            }
+            if (lives <= 0) {
+                showOverlay('💀', 'Game Over!', 'The ghosts got you — try again!', currentScore, true);
+            } else {
+                // Still has lives — brief flash then restart
+                showOverlay('👻', 'Caught!', `${lives} ${lives === 1 ? 'life' : 'lives'} remaining...`, null, false);
+                startBtn.textContent = '▶ Continue';
+                startBtn.style.display = 'flex';
+                resetBtn.style.display = 'flex';
+                resetBtn.textContent = '↺ Restart';
+            }
+        };
+
+        const _winGame = winGame;
+        window.winGame = function() {
+            gameRunning = false;
+            const currentScore = parseInt(scoreEl.textContent) || 0;
+            if (currentScore > highScore) {
+                highScore = currentScore;
+                highScoreEl.textContent = highScore;
+            }
+            showOverlay('🎉', 'You Win!', 'All dots collected — incredible!', currentScore, true);
+        };
+
+        // Patch score updates to also track high score
+        const origCheckCollisions = checkCollisions;
+        window.checkCollisions = function() {
+            origCheckCollisions();
+            const cur = parseInt(scoreEl.textContent) || 0;
+            if (cur > highScore) {
+                highScore = cur;
+                highScoreEl.textContent = highScore;
+            }
+        };
+    </script>
+</body>
+</html>
