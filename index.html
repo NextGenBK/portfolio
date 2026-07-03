@@ -12,32 +12,28 @@
 </head>
 <body>
 
-    <!-- Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">BK<span class="logo-dot">.</span></a>
-            </div>
+            <div class="nav-logo"><a href="#home">BK<span class="logo-dot">.</span></a></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link contact-cta">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-bg">
             <div class="grid-overlay"></div>
@@ -47,44 +43,30 @@
         </div>
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Available for opportunities
-                </div>
+                <div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
                 <h1 class="hero-title">
                     <span class="hero-greeting">Hi, I'm</span>
                     <span class="hero-name">Bayanda<br>Khoza</span>
                 </h1>
                 <div class="hero-role">
                     <span class="role-prefix">—</span>
-                    <span class="role-text" id="roleText">ICT Applications Developer</span>
+                    <span class="role-text" id="roleText">Full-Stack Developer</span>
                 </div>
                 <p class="hero-description">
-                    Building robust full-stack solutions with <strong>.NET</strong> & cloud technologies. 
-                    Based in Durban, crafting digital experiences that make a difference.
+                    Final-year ICT developer at <strong>DUT</strong> building production-ready apps with
+                    <strong>Python Flask</strong>, <strong>Android Java</strong>, and <strong>AI integration</strong>.
+                    Based in Durban, crafting digital solutions that make a real difference.
                 </p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary"><span>View My Work</span><i class="fas fa-arrow-right"></i></a>
+                    <a href="#experience" class="btn btn-ghost">My CV</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-target="3">0</span>
-                        <span class="stat-label">Projects Built</span>
-                    </div>
+                    <div class="stat"><span class="stat-number" data-target="5">0</span><span class="stat-label">Projects Built</span></div>
                     <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="10">0</span>
-                        <span class="stat-label">Technologies</span>
-                    </div>
+                    <div class="stat"><span class="stat-number" data-target="15">0</span><span class="stat-label">Technologies</span></div>
                     <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="2">0</span>
-                        <span class="stat-label">Years Studying</span>
-                    </div>
+                    <div class="stat"><span class="stat-number" data-target="3">0</span><span class="stat-label">Years Studying</span></div>
                 </div>
             </div>
             <div class="hero-visual">
@@ -94,28 +76,17 @@
                     <div class="profile-image-container">
                         <img src="assets/profile-pic.jpg.jpg" alt="Bayanda Khoza" class="profile-pic">
                     </div>
-                    <div class="floating-tag tag-1">
-                        <i class="fab fa-microsoft"></i> .NET
-                    </div>
-                    <div class="floating-tag tag-2">
-                        <i class="fab fa-react"></i> React
-                    </div>
-                    <div class="floating-tag tag-3">
-                        <i class="fab fa-github"></i> GitHub
-                    </div>
-                    <div class="floating-tag tag-4">
-                        <i class="fas fa-cloud"></i> Azure
-                    </div>
+                    <div class="floating-tag tag-1"><i class="fab fa-python"></i> Flask</div>
+                    <div class="floating-tag tag-2"><i class="fab fa-android"></i> Android</div>
+                    <div class="floating-tag tag-3"><i class="fas fa-fire"></i> Firebase</div>
+                    <div class="floating-tag tag-4"><i class="fas fa-brain"></i> Groq AI</div>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Scroll</span>
-        </div>
+        <div class="scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -124,164 +95,172 @@
             </div>
             <div class="about-grid">
                 <div class="about-text-block">
-                    <p class="about-lead">
-                        I'm a passionate ICT developer pursuing my Diploma at 
-                        <strong>Durban University of Technology</strong>, specialising in 
-                        full-stack application development.
-                    </p>
-                    <p>
-                        Through academic projects, freelance work, and collaborative team environments, 
-                        I've developed practical experience building robust applications with 
-                        <span class="highlight">C# .NET</span>, <span class="highlight">SQL Server</span>, 
-                        and modern web technologies. I'm particularly drawn to cloud architecture 
-                        and scalable systems.
-                    </p>
-                    <p>
-                        When I'm not coding, I'm exploring new frameworks, contributing to open-source 
-                        projects, or competing in hackathons. I believe in writing clean, maintainable 
-                        code that solves real problems.
-                    </p>
-                    <a href="mailto:khozabayanda50@gmail.com" class="btn btn-primary btn-sm">
-                        <span>Let's Connect</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <p class="about-lead">Final-year ICT Applications Development student at <strong>Durban University of Technology</strong>, building production-ready software that ships.</p>
+                    <p>I've led and delivered full-stack web platforms with <span class="highlight">Python Flask</span> and <span class="highlight">PostgreSQL</span>, and solo-built Android apps with <span class="highlight">Java & Firebase</span>. Every project I touch gets AI integration — I use <span class="highlight">Groq API (LLaMA 3.3 70B)</span> because it's powerful and free.</p>
+                    <p>On every team project I run <span class="highlight">Agile sprints</span> with feature branches — nobody merges to main unless it's tested and working. I've played Scrum Master, Product Owner, and Lead Developer across different projects.</p>
+                    <a href="#experience" class="btn btn-primary btn-sm"><span>View My CV</span><i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="about-details-block">
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Location</span>
-                            <span class="detail-value">Durban, South Africa</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Education</span>
-                            <span class="detail-value">DUT — ICT Applications Development</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Graduation</span>
-                            <span class="detail-value">Expected 2025</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Specialisation</span>
-                            <span class="detail-value">.NET & Cloud Technologies</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <div>
-                            <span class="detail-label">Languages</span>
-                            <span class="detail-value">English, Zulu, Xhosa</span>
-                        </div>
-                    </div>
+                    <div class="detail-card"><div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div><div><span class="detail-label">Location</span><span class="detail-value">Durban, South Africa</span></div></div>
+                    <div class="detail-card"><div class="detail-icon"><i class="fas fa-graduation-cap"></i></div><div><span class="detail-label">Education</span><span class="detail-value">DUT — Advanced Dip. ICT (2026)</span></div></div>
+                    <div class="detail-card"><div class="detail-icon"><i class="fas fa-certificate"></i></div><div><span class="detail-label">Completed</span><span class="detail-value">Diploma ICT — Nov 2025 (Distinction)</span></div></div>
+                    <div class="detail-card"><div class="detail-icon"><i class="fas fa-code-branch"></i></div><div><span class="detail-label">Methodology</span><span class="detail-value">Agile / Scrum — Feature Branches</span></div></div>
+                    <div class="detail-card"><div class="detail-icon"><i class="fas fa-brain"></i></div><div><span class="detail-label">AI Stack</span><span class="detail-value">Groq API · LLaMA 3.3 70B · Firebase</span></div></div>
+                    <div class="detail-card"><div class="detail-icon"><i class="fas fa-language"></i></div><div><span class="detail-label">Languages</span><span class="detail-value">English, isiZulu (both fluent)</span></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">02 / Skills</span>
                 <h2 class="section-title">Technical Stack</h2>
             </div>
-            <div class="skills-layout">
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <div class="skill-group-icon">
-                            <i class="fas fa-desktop"></i>
+
+            <!-- Stack tabs -->
+            <div class="stack-tabs">
+                <button class="stack-tab active" data-tab="web">🌐 Web (Project 1)</button>
+                <button class="stack-tab" data-tab="mobile">📱 Mobile (Project 2)</button>
+                <button class="stack-tab" data-tab="ai">🤖 AI & Cloud</button>
+                <button class="stack-tab" data-tab="other">⚙️ Other</button>
+            </div>
+
+            <div class="stack-panel active" id="tab-web">
+                <div class="stack-description">
+                    <div class="stack-badge web">Project 1 — Web-Based App · Flask · Crystal Agile</div>
+                    <p>Flask web apps following Crystal (Yellow) Agile methodology. Teams work on feature branches, only merging to main after full testing. Deployed on Render / PythonAnywhere.</p>
+                </div>
+                <div class="skills-layout">
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-desktop"></i></div><h3>Frontend</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">HTML5</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">CSS3</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">JavaScript</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">Bootstrap 5</div>
+                            <div class="skill-pill"><i class="fas fa-code" style="color:#9f7aea"></i>Jinja2</div>
                         </div>
-                        <h3>Frontend</h3>
                     </div>
-                    <div class="skill-pills">
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                            HTML5
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-server"></i></div><h3>Backend</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">Flask</div>
+                            <div class="skill-pill"><i class="fas fa-shield-alt" style="color:#22d3ee"></i>Flask-Login</div>
+                            <div class="skill-pill"><i class="fas fa-envelope" style="color:#a78bfa"></i>Flask-Mail</div>
+                            <div class="skill-pill"><i class="fas fa-database" style="color:#34d399"></i>SQLAlchemy</div>
                         </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                            CSS3
-                        </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-                            JavaScript
-                        </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                            React
+                    </div>
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-database"></i></div><h3>Database & Deploy</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">PostgreSQL</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">SQLite</div>
+                            <div class="skill-pill"><i class="fas fa-cloud-upload-alt" style="color:#22d3ee"></i>Render.com</div>
+                            <div class="skill-pill"><i class="fas fa-image" style="color:#f472b6"></i>Cloudinary</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <div class="skill-group-icon">
-                            <i class="fas fa-server"></i>
+            <div class="stack-panel" id="tab-mobile">
+                <div class="stack-description">
+                    <div class="stack-badge mobile">Project 2 — Native Android App · Java · Scrum Agile</div>
+                    <p>Native Android apps in Java using Android Studio. Scrum sprints with daily stand-ups, feature branches, and sprint reviews. Firebase as the backend — no separate server needed.</p>
+                </div>
+                <div class="skills-layout">
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fab fa-android"></i></div><h3>Android</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">Android Studio</div>
+                            <div class="skill-pill"><i class="fas fa-layer-group" style="color:#4CAF50"></i>Material Design 3</div>
+                            <div class="skill-pill"><i class="fas fa-list" style="color:#a78bfa"></i>RecyclerView</div>
+                            <div class="skill-pill"><i class="fas fa-puzzle-piece" style="color:#22d3ee"></i>Fragments</div>
+                            <div class="skill-pill"><i class="fas fa-image" style="color:#f59e0b"></i>Glide</div>
                         </div>
-                        <h3>Backend</h3>
                     </div>
-                    <div class="skill-pills">
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
-                            C# .NET
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-fire"></i></div><h3>Firebase Backend</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i class="fas fa-fire" style="color:#f59e0b"></i>Firebase Auth</div>
+                            <div class="skill-pill"><i class="fas fa-database" style="color:#f59e0b"></i>Firestore</div>
+                            <div class="skill-pill"><i class="fas fa-bolt" style="color:#f59e0b"></i>Realtime DB</div>
+                            <div class="skill-pill"><i class="fas fa-folder" style="color:#f59e0b"></i>Firebase Storage</div>
+                            <div class="skill-pill"><i class="fas fa-bell" style="color:#f59e0b"></i>FCM Notifications</div>
                         </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="ASP.NET">
-                            ASP.NET Core
-                        </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL">
-                            SQL Server
-                        </div>
-                        <div class="skill-pill">
-                            <i class="fas fa-layer-group" style="color:#9f7aea;font-size:1.1rem"></i>
-                            Entity Framework
+                    </div>
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-plug"></i></div><h3>APIs & Storage</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i class="fas fa-network-wired" style="color:#22d3ee"></i>OkHttp</div>
+                            <div class="skill-pill"><i class="fas fa-image" style="color:#f472b6"></i>Cloudinary</div>
+                            <div class="skill-pill"><i class="fas fa-chart-bar" style="color:#a78bfa"></i>MPAndroidChart</div>
+                            <div class="skill-pill"><i class="fas fa-mobile-alt" style="color:#34d399"></i>SDK API 24–36</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <div class="skill-group-icon">
-                            <i class="fas fa-cloud"></i>
+            <div class="stack-panel" id="tab-ai">
+                <div class="stack-description">
+                    <div class="stack-badge ai">AI Integration — Groq API · LLaMA 3.3 70B · Free & Fast</div>
+                    <p>I integrate Groq API across every project because it's completely free, blazingly fast, and runs LLaMA 3.3 70B — one of the most capable open models available. SkillExchange alone ships with 7 AI-powered features.</p>
+                </div>
+                <div class="skills-layout">
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-brain"></i></div><h3>AI & LLMs</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i class="fas fa-bolt" style="color:#f59e0b"></i>Groq API</div>
+                            <div class="skill-pill"><i class="fas fa-brain" style="color:#a78bfa"></i>LLaMA 3.3 70B</div>
+                            <div class="skill-pill"><i class="fas fa-comment-dots" style="color:#22d3ee"></i>Prompt Engineering</div>
+                            <div class="skill-pill"><i class="fas fa-robot" style="color:#34d399"></i>AI Chatbots</div>
+                            <div class="skill-pill"><i class="fas fa-chart-line" style="color:#f472b6"></i>AI Analytics</div>
                         </div>
-                        <h3>Tools & Cloud</h3>
                     </div>
-                    <div class="skill-pills">
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                            Git & GitHub
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-cloud"></i></div><h3>Cloud & Storage</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i class="fas fa-image" style="color:#f472b6"></i>Cloudinary</div>
+                            <div class="skill-pill"><i class="fas fa-fire" style="color:#f59e0b"></i>Firebase</div>
+                            <div class="skill-pill"><i class="fas fa-server" style="color:#22d3ee"></i>Render.com</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">Azure (intro)</div>
                         </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
-                            Azure
+                    </div>
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-shield-alt"></i></div><h3>Security</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i class="fas fa-key" style="color:#f59e0b"></i>JWT Auth</div>
+                            <div class="skill-pill"><i class="fas fa-lock" style="color:#22d3ee"></i>bcrypt Hashing</div>
+                            <div class="skill-pill"><i class="fas fa-user-shield" style="color:#a78bfa"></i>POPIA Compliance</div>
+                            <div class="skill-pill"><i class="fas fa-bug" style="color:#f472b6"></i>XSS / SQLi Prevention</div>
                         </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
-                            VS Code
+                    </div>
+                </div>
+            </div>
+
+            <div class="stack-panel" id="tab-other">
+                <div class="stack-description">
+                    <div class="stack-badge other">Additional Skills — Certifications · Tools · Legacy Stack</div>
+                    <p>Huawei AI, Cisco Cybersecurity & IoT certified. Also proficient in the C# .NET stack from earlier projects.</p>
+                </div>
+                <div class="skills-layout">
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-tools"></i></div><h3>Dev Tools</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">Git & GitHub</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">VS Code</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS">Visual Studio</div>
+                            <div class="skill-pill"><i class="fas fa-vial" style="color:#f472b6"></i>Postman</div>
+                            <div class="skill-pill"><i class="fas fa-code-branch" style="color:#22d3ee"></i>Feature Branching</div>
                         </div>
-                        <div class="skill-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                            Docker
+                    </div>
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-certificate"></i></div><h3>Certifications</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i class="fas fa-brain" style="color:#c8102e"></i>Huawei AI Overview</div>
+                            <div class="skill-pill"><i class="fas fa-shield-alt" style="color:#1ba0d7"></i>Cisco Cybersecurity</div>
+                            <div class="skill-pill"><i class="fas fa-wifi" style="color:#1ba0d7"></i>Cisco IoT Intro</div>
+                        </div>
+                    </div>
+                    <div class="skill-group"><div class="skill-group-header"><div class="skill-group-icon"><i class="fas fa-laptop-code"></i></div><h3>Legacy / Other</h3></div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">C# .NET</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="ASP.NET">ASP.NET Core</div>
+                            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL">SQL Server</div>
+                            <div class="skill-pill"><i class="fas fa-layer-group" style="color:#9f7aea"></i>Entity Framework</div>
                         </div>
                     </div>
                 </div>
@@ -291,54 +270,18 @@
             <div class="proficiency-section">
                 <h3 class="proficiency-title">Proficiency Levels</h3>
                 <div class="proficiency-grid">
-                    <div class="proficiency-item">
-                        <div class="prof-meta">
-                            <span>C# .NET</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="prof-bar"><div class="prof-fill" data-width="85"></div></div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="prof-meta">
-                            <span>HTML/CSS</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="prof-bar"><div class="prof-fill" data-width="90"></div></div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="prof-meta">
-                            <span>JavaScript</span>
-                            <span>78%</span>
-                        </div>
-                        <div class="prof-bar"><div class="prof-fill" data-width="78"></div></div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="prof-meta">
-                            <span>SQL Server</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="prof-bar"><div class="prof-fill" data-width="80"></div></div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="prof-meta">
-                            <span>Azure / Cloud</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="prof-bar"><div class="prof-fill" data-width="65"></div></div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="prof-meta">
-                            <span>React</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="prof-bar"><div class="prof-fill" data-width="70"></div></div>
-                    </div>
+                    <div class="proficiency-item"><div class="prof-meta"><span>Python / Flask</span><span>88%</span></div><div class="prof-bar"><div class="prof-fill" data-width="88"></div></div></div>
+                    <div class="proficiency-item"><div class="prof-meta"><span>Android Java</span><span>85%</span></div><div class="prof-bar"><div class="prof-fill" data-width="85"></div></div></div>
+                    <div class="proficiency-item"><div class="prof-meta"><span>HTML / CSS / JS</span><span>90%</span></div><div class="prof-bar"><div class="prof-fill" data-width="90"></div></div></div>
+                    <div class="proficiency-item"><div class="prof-meta"><span>Firebase</span><span>82%</span></div><div class="prof-bar"><div class="prof-fill" data-width="82"></div></div></div>
+                    <div class="proficiency-item"><div class="prof-meta"><span>Groq AI / LLMs</span><span>80%</span></div><div class="prof-bar"><div class="prof-fill" data-width="80"></div></div></div>
+                    <div class="proficiency-item"><div class="prof-meta"><span>C# .NET</span><span>75%</span></div><div class="prof-bar"><div class="prof-fill" data-width="75"></div></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -347,68 +290,95 @@
             </div>
             <div class="projects-grid">
 
-                <!-- Delos Project -->
+                <!-- RESIFIX — Featured -->
                 <div class="project-card featured">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #3730a3 100%);">
+                        <div class="project-pattern"></div>
+                        <i class="fas fa-wrench project-icon"></i>
+                        <span class="project-badge">Featured · Live</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header">
+                            <h3>RESIFIX — Residence Maintenance</h3>
+                            <div class="project-status live"><span class="status-dot"></span>Live</div>
+                        </div>
+                        <p>Lead developer on an 11-member team. Full-stack maintenance request platform for DUT student residences — submit, track and resolve repair issues with full admin oversight. Deployed on Render.</p>
+                        <div class="project-tech">
+                            <span>Python Flask</span><span>PostgreSQL</span><span>Bootstrap 5</span>
+                            <span>Jinja2</span><span>Cloudinary</span><span>Groq AI</span><span>Render</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ResiFlxGroup20/resifix" target="_blank" class="project-btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://resifix-qk5t.onrender.com" target="_blank" class="project-btn btn-solid"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SkillExchange Android -->
+                <div class="project-card">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);">
+                        <div class="project-pattern"></div>
+                        <i class="fab fa-android project-icon"></i>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header">
+                            <h3>SkillExchange — Android App</h3>
+                            <div class="project-status live"><span class="status-dot"></span>Complete</div>
+                        </div>
+                        <p>Solo-built native Android app for peer-to-peer skill trading. Ships 7 AI-powered features using Groq API (LLaMA 3.3 70B). Firebase backend — auth, Firestore, Realtime DB, and Storage.</p>
+                        <div class="project-tech">
+                            <span>Android Java</span><span>Firebase</span><span>Groq AI</span>
+                            <span>Cloudinary</span><span>Material Design 3</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/NextGenBK/skillExchange" target="_blank" class="project-btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delos -->
+                <div class="project-card">
                     <div class="project-visual" style="background: linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%);">
                         <div class="project-pattern"></div>
                         <i class="fas fa-utensils project-icon"></i>
-                        <span class="project-badge">Featured</span>
                     </div>
                     <div class="project-body">
                         <div class="project-header">
                             <h3>Delos Lounge & Dining</h3>
-                            <div class="project-status wip">
-                                <span class="status-dot"></span>Demo Offline
-                            </div>
+                            <div class="project-status wip"><span class="status-dot"></span>Demo Offline</div>
                         </div>
-                        <p>A comprehensive restaurant management system featuring table booking, menu management, and real-time order tracking — deployed on Azure.</p>
-                        <div class="project-tech">
-                            <span>C# .NET</span>
-                            <span>SQL Server</span>
-                            <span>ASP.NET Core</span>
-                            <span>Entity Framework</span>
-                            <span>Azure</span>
-                        </div>
+                        <p>Full-stack restaurant management system — table booking, menu management, and order tracking. Azure deployment (credits expired — source available).</p>
+                        <div class="project-tech"><span>C# .NET</span><span>ASP.NET Core</span><span>SQL Server</span><span>Entity Framework</span><span>Azure</span></div>
                         <div class="project-actions">
-                            <a href="https://github.com/Thabza20/DelosApp" target="_blank" class="project-btn btn-outline">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <span class="project-btn btn-disabled" title="Azure credits expired — demo offline">
-                                <i class="fas fa-cloud-slash"></i> Demo Offline
-                            </span>
+                            <a href="https://github.com/Thabza20/DelosApp" target="_blank" class="project-btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
+                            <span class="project-btn btn-disabled"><i class="fas fa-cloud"></i> Demo Offline</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- SkillExchange Project -->
+                <!-- Signal Zero -->
                 <div class="project-card">
-                    <div class="project-visual" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #0a0a1a 0%, #001a2e 50%, #000d1a 100%); border-bottom: 1px solid rgba(0,255,255,0.15);">
                         <div class="project-pattern"></div>
-                        <i class="fas fa-handshake project-icon"></i>
+                        <div style="position:relative;z-index:1;text-align:center;">
+                            <div style="font-size:2.5rem;color:#0ff;text-shadow:0 0 20px #0ff,0 0 40px #0ff4;line-height:1;">⚡</div>
+                            <div style="font-size:0.65rem;letter-spacing:6px;color:#0ff8;font-weight:700;margin-top:6px;font-family:monospace;">SIGNAL ZERO</div>
+                        </div>
                     </div>
                     <div class="project-body">
                         <div class="project-header">
-                            <h3>SkillExchange Platform</h3>
-                            <div class="project-status wip">
-                                <span class="status-dot"></span>In Dev
-                            </div>
+                            <h3>Signal Zero — Cyberpunk Shooter</h3>
+                            <div class="project-status live"><span class="status-dot"></span>Playable</div>
                         </div>
-                        <p>A peer-to-peer skill trading platform where users can exchange knowledge and expertise — built with a collaborative team approach.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>ASP.NET</span>
-                            <span>SQL Server</span>
-                            <span>Azure</span>
-                        </div>
+                        <p>Browser-based cyberpunk shooter built from scratch. Multi-phase boss, story cutscenes, combo system, power-ups, leaderboard, and full CRT scanline aesthetic.</p>
+                        <div class="project-tech"><span>HTML5 Canvas</span><span>Vanilla JS</span><span>Web Audio API</span><span>CSS3</span></div>
                         <div class="project-actions">
-                            <a href="https://github.com/ResiFlxGroup20/skillExchange" target="_blank" class="project-btn btn-outline">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
+                            <a href="SignalZero/signal_zero.html" class="project-btn btn-solid"><i class="fas fa-play"></i> Play Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pac-Man Game -->
+                <!-- Pac-Man -->
                 <div class="project-card">
                     <div class="project-visual" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);">
                         <div class="project-pattern"></div>
@@ -416,83 +386,14 @@
                     </div>
                     <div class="project-body">
                         <div class="project-header">
-                            <h3>Pac-Man Game</h3>
-                            <div class="project-status live">
-                                <span class="status-dot"></span>Playable
-                            </div>
+                            <h3>Pac-Man</h3>
+                            <div class="project-status live"><span class="status-dot"></span>Playable</div>
                         </div>
-                        <p>A classic Pac-Man game built with HTML5 Canvas and vanilla JavaScript. Features ghosts, dot collection, and score tracking.</p>
-                        <div class="project-tech">
-                            <span>HTML5 Canvas</span>
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                        </div>
+                        <p>Classic Pac-Man reimplemented with HTML5 Canvas and vanilla JavaScript. Ghost AI, dot collection, power-ups, lives system, and high score tracking.</p>
+                        <div class="project-tech"><span>HTML5 Canvas</span><span>JavaScript</span><span>CSS3</span></div>
                         <div class="project-actions">
-                            <a href="https://github.com/NextGenBK/portfolio/blob/main/Pacman/pacman-game.js" target="_blank" class="project-btn btn-outline">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <a href="Pacman/pacman-game.html" class="project-btn btn-solid">
-                                <i class="fas fa-play"></i> Play Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Signal Zero Game -->
-                <div class="project-card">
-                    <div class="project-visual" style="background: linear-gradient(135deg, #0a0a1a 0%, #001a2e 50%, #000d1a 100%); border-bottom: 1px solid rgba(0,255,255,0.15);">
-                        <div class="project-pattern"></div>
-                        <div style="position:relative;z-index:1;text-align:center;">
-                            <div style="font-size:2.5rem;letter-spacing:4px;font-family:'monospace';color:#0ff;text-shadow:0 0 20px #0ff,0 0 40px #0ff4;line-height:1;">⚡</div>
-                            <div style="font-size:0.65rem;letter-spacing:6px;color:#0ff8;font-weight:700;margin-top:6px;font-family:monospace;">SIGNAL ZERO</div>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-header">
-                            <h3>Signal Zero</h3>
-                            <div class="project-status live">
-                                <span class="status-dot"></span>Playable
-                            </div>
-                        </div>
-                        <p>A full cyberpunk shooter built from scratch — featuring a multi-phase boss, story cutscenes, combo system, power-ups, leaderboard, and a fully custom CRT aesthetic.</p>
-                        <div class="project-tech">
-                            <span>HTML5 Canvas</span>
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                            <span>Game AI</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="SignalZero/signal_zero.html" class="project-btn btn-solid">
-                                <i class="fas fa-play"></i> Play Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cloud API -->
-                <div class="project-card">
-                    <div class="project-visual" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);">
-                        <div class="project-pattern"></div>
-                        <i class="fas fa-cloud project-icon"></i>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-header">
-                            <h3>Cloud API Service</h3>
-                            <div class="project-status wip">
-                                <span class="status-dot"></span>Coming Soon
-                            </div>
-                        </div>
-                        <p>RESTful API built with .NET Core and deployed on Azure, featuring JWT authentication, rate limiting, and comprehensive documentation.</p>
-                        <div class="project-tech">
-                            <span>ASP.NET</span>
-                            <span>Azure</span>
-                            <span>Docker</span>
-                            <span>JWT</span>
-                        </div>
-                        <div class="project-actions">
-                            <span class="project-btn btn-disabled">
-                                <i class="fas fa-lock"></i> In Progress
-                            </span>
+                            <a href="https://github.com/NextGenBK/portfolio/blob/main/Pacman/pacman-game.js" target="_blank" class="project-btn btn-outline"><i class="fab fa-github"></i> Source</a>
+                            <a href="Pacman/pacman-game.html" class="project-btn btn-solid"><i class="fas fa-play"></i> Play</a>
                         </div>
                     </div>
                 </div>
@@ -501,88 +402,223 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Experience / CV -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">04 / Experience</span>
+                <h2 class="section-title">My Journey</h2>
+            </div>
+
+            <!-- CV Download Banner -->
+            <div class="cv-banner">
+                <div class="cv-banner-left">
+                    <div class="cv-banner-icon"><i class="fas fa-file-alt"></i></div>
+                    <div>
+                        <div class="cv-banner-title">Bayanda Khoza — CV 2026</div>
+                        <div class="cv-banner-sub">Full-Stack Developer · Android & AI Integration · DUT Final Year</div>
+                    </div>
+                </div>
+                <div class="cv-banner-actions">
+                    <button class="btn btn-primary" id="viewCvBtn"><i class="fas fa-eye"></i> <span>View CV</span></button>
+                </div>
+            </div>
+
+            <!-- CV Modal -->
+            <div class="cv-modal" id="cvModal">
+                <div class="cv-modal-backdrop" id="cvBackdrop"></div>
+                <div class="cv-modal-box">
+                    <div class="cv-modal-header">
+                        <h3>Bayanda Ntuthuko Khoza — CV 2026</h3>
+                        <button class="cv-modal-close" id="cvClose"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="cv-modal-body">
+                        <!-- Profile -->
+                        <div class="cv-section">
+                            <div class="cv-section-label">Professional Profile</div>
+                            <p class="cv-profile-text">Final-year ICT Applications Development student at Durban University of Technology with hands-on experience delivering production-ready full-stack and mobile applications. Led end-to-end architecture of RESIFIX (deployed Python Flask platform, 11-member team) and solo-built SkillExchange (Android app with 7 AI-powered features). Proficient in Python, Java, JavaScript, C#, Firebase, and REST API integration. Seeking a software development internship to contribute clean, scalable solutions.</p>
+                        </div>
+                        <!-- Contact row -->
+                        <div class="cv-contact-row">
+                            <span><i class="fas fa-phone"></i> 068 033 5266</span>
+                            <span><i class="fas fa-envelope"></i> khozabayanda50@gmail.com</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Durban, SA</span>
+                            <span><i class="fas fa-globe"></i> nextgenbk.github.io/portfolio</span>
+                        </div>
+                        <!-- Education -->
+                        <div class="cv-section">
+                            <div class="cv-section-label">Education</div>
+                            <div class="cv-edu-item">
+                                <div class="cv-edu-header">
+                                    <div><strong>Advanced Diploma in ICT: Applications Development</strong><div class="cv-edu-sub">Durban University of Technology · 2026 – Present · In Progress</div></div>
+                                    <span class="cv-badge current">Current</span>
+                                </div>
+                                <p>Deepening expertise in application architecture, systems design, and platform-based development.</p>
+                            </div>
+                            <div class="cv-edu-item">
+                                <div class="cv-edu-header">
+                                    <div><strong>Diploma in ICT: Applications Development</strong><div class="cv-edu-sub">Durban University of Technology · 2023 – 2025 · Completed Nov 2025</div></div>
+                                    <span class="cv-badge distinction">Distinction</span>
+                                </div>
+                                <p>Applications Development IB (84%) · Applications Development IIIB (75%) · Mobile Computing I–III · IT Project Management · Human-Computer Interaction</p>
+                            </div>
+                            <div class="cv-edu-item">
+                                <div class="cv-edu-header">
+                                    <div><strong>National Senior Certificate (Grade 12)</strong><div class="cv-edu-sub">Rossburgh High School · Seaview · 2018 – 2022</div></div>
+                                </div>
+                                <p>Mathematics · Physics · Mechanics · Life Sciences · English HL · isiZulu · Tourism</p>
+                            </div>
+                        </div>
+                        <!-- Certifications -->
+                        <div class="cv-section">
+                            <div class="cv-section-label">Certifications</div>
+                            <div class="cv-cert-grid">
+                                <div class="cv-cert"><i class="fas fa-brain"></i><span>Huawei ICT Academy — Overview of AI</span></div>
+                                <div class="cv-cert"><i class="fas fa-shield-alt"></i><span>Cisco Networking Academy — Cybersecurity Essentials</span></div>
+                                <div class="cv-cert"><i class="fas fa-wifi"></i><span>Cisco Networking Academy — Introduction to IoT</span></div>
+                            </div>
+                        </div>
+                        <!-- Tech Skills -->
+                        <div class="cv-section">
+                            <div class="cv-section-label">Technical Skills</div>
+                            <div class="cv-skills-table">
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Languages</span><span>Python · Java (Android) · JavaScript · C# · HTML5 · CSS3 · SQL</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Web Framework</span><span>Flask · Bootstrap 5 · Jinja2 · Flask-Login · Flask-Mail · Flask-SQLAlchemy · WTForms</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Android</span><span>Android Studio · SDK API 24–36 · Material Design 3 · RecyclerView · OkHttp · Glide · MPAndroidChart</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">AI & APIs</span><span>Groq API (LLaMA 3.3 70B) · REST API design · Prompt Engineering · AI Feature Integration</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Databases</span><span>PostgreSQL · SQLite · SQLAlchemy ORM · Firebase Firestore · Firebase Realtime DB · SQL Server</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Cloud & DevOps</span><span>Render.com · Cloudinary · Firebase Auth & Storage · Azure (intro) · Git · GitHub</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Methodology</span><span>Agile/Scrum (Scrum Master & Product Owner) · Crystal Yellow · Feature Branching · Sprint Reviews</span></div>
+                            </div>
+                        </div>
+                        <!-- Projects in CV -->
+                        <div class="cv-section">
+                            <div class="cv-section-label">Key Projects</div>
+                            <div class="cv-project-item">
+                                <div class="cv-project-header"><strong>RESIFIX — Student Residence Maintenance System</strong><a href="https://resifix-qk5t.onrender.com" target="_blank" class="cv-link">resifix-qk5t.onrender.com ↗</a></div>
+                                <div class="cv-project-meta">Lead Developer & Architecture Owner · 11-member team · DUT PBDE401</div>
+                                <div class="cv-project-tech">Python Flask · PostgreSQL · Bootstrap 5 · Jinja2 · Cloudinary · Render.com · Groq AI</div>
+                                <p>Led full-stack architecture: auth system, role-based access (admin/student/maintenance), request lifecycle tracking, image uploads via Cloudinary, AI-powered maintenance triage via Groq API.</p>
+                            </div>
+                            <div class="cv-project-item">
+                                <div class="cv-project-header"><strong>SkillExchange — Community Skill Exchange Mobile App</strong><a href="https://github.com/NextGenBK/skillExchange" target="_blank" class="cv-link">github.com ↗</a></div>
+                                <div class="cv-project-meta">Solo Developer · DUT PBDV301/PBDE401 · May 2026</div>
+                                <div class="cv-project-tech">Android Java · Firebase (Auth/Firestore/Realtime DB) · Groq API · Cloudinary · Material Design 3</div>
+                                <p>Solo-built native Android app connecting people for skill-sharing. 7 AI-powered features including AI matching engine, trust scoring, and conversational chatbot powered by LLaMA 3.3 70B.</p>
+                            </div>
+                            <div class="cv-project-item">
+                                <div class="cv-project-header"><strong>Delos Lounge & Dining — Restaurant Management Platform</strong></div>
+                                <div class="cv-project-meta">Developer · Team Project</div>
+                                <div class="cv-project-tech">C# .NET · SQL Server · ASP.NET Core · Entity Framework · Azure</div>
+                                <p>Full-stack restaurant system with online reservations, menu management, and integrated billing. Designed relational DB schema and implemented CRUD via Entity Framework.</p>
+                            </div>
+                        </div>
+                        <!-- Soft skills / additional -->
+                        <div class="cv-section">
+                            <div class="cv-section-label">Additional</div>
+                            <div class="cv-skills-table">
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Agile Roles</span><span>Product Owner · Scrum Master · Lead Developer · UI/UX Developer</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Collaboration</span><span>GitHub (branching, PRs, code review) · Microsoft Teams · WhatsApp</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Languages Spoken</span><span>English (Fluent) · isiZulu (Fluent)</span></div>
+                                <div class="cv-skill-row"><span class="cv-skill-cat">Interests</span><span>Cloud architecture · AI/LLM integration · Mobile-first development · Scalable app design</span></div>
+                            </div>
+                        </div>
+                        <div class="cv-footer-note">References available on request · <a href="mailto:khozabayanda50@gmail.com">khozabayanda50@gmail.com</a> · 068 033 5266</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2026 — Present</div>
+                        <h3>Advanced Diploma in ICT: Applications Development</h3>
+                        <p class="timeline-org">Durban University of Technology</p>
+                        <p>Continuing with platform-based development, building two major projects — a Flask web app (Project 1) and a native Android app (Project 2) — both with AI integration and Agile methodology.</p>
+                        <div class="timeline-tags"><span>Flask</span><span>Android</span><span>Groq AI</span><span>Scrum</span></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot highlight"></div>
+                    <div class="timeline-content highlight-card">
+                        <div class="timeline-date">May 2026</div>
+                        <h3>🏆 SkillExchange Android App — Solo Build</h3>
+                        <p class="timeline-org">DUT PBDV301/PBDE401 · Solo Developer</p>
+                        <p>Designed and delivered a complete native Android application entirely solo — 7 AI-powered features, Firebase backend, Cloudinary storage, and full Material Design 3 UI.</p>
+                        <div class="timeline-tags"><span>Android Java</span><span>Firebase</span><span>Groq API</span><span>LLaMA 3.3</span><span>Cloudinary</span></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot highlight"></div>
+                    <div class="timeline-content highlight-card">
+                        <div class="timeline-date">2025</div>
+                        <h3>🏆 RESIFIX — Lead Developer, 11-Member Team</h3>
+                        <p class="timeline-org">DUT PBDE401 · Deployed on Render</p>
+                        <p>Led architecture and development of a full production Flask web app. Owned the entire backend, auth system, database design, and Groq AI integration. Running live.</p>
+                        <div class="timeline-tags"><span>Python Flask</span><span>PostgreSQL</span><span>Groq AI</span><span>Scrum Master</span><span>Render</span></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025</div>
+                        <h3>Diploma in ICT: Applications Development — Completed</h3>
+                        <p class="timeline-org">Durban University of Technology · Certificate of Good Conduct</p>
+                        <p>Completed Nov 2025 with distinction in core modules — Applications Development IB (84%) and IIIB (75%). Covered mobile computing, systems design, IT project management, and HCI.</p>
+                        <div class="timeline-tags"><span>Pass Distinction</span><span>84% App Dev IB</span><span>75% App Dev IIIB</span></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>Started ICT Diploma at DUT</h3>
+                        <p class="timeline-org">Durban University of Technology</p>
+                        <p>Began journey in software development. First exposure to C#, .NET, SQL Server, and team-based project development with Agile methodologies.</p>
+                        <div class="timeline-tags"><span>C# .NET</span><span>SQL Server</span><span>Agile</span></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <h3>National Senior Certificate — Grade 12</h3>
+                        <p class="timeline-org">Rossburgh High School · Seaview, Durban</p>
+                        <p>Completed Matric with Mathematics, Physics, and Life Sciences. Foundation in analytical and logical thinking that drives my approach to software engineering.</p>
+                        <div class="timeline-tags"><span>Mathematics</span><span>Physics</span><span>Life Sciences</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">04 / Contact</span>
+                <span class="section-label">05 / Contact</span>
                 <h2 class="section-title">Get In Touch</h2>
             </div>
             <div class="contact-layout">
                 <div class="contact-left">
-                    <p class="contact-intro">
-                        Whether you have a project in mind, a job opportunity, or just want to connect — 
-                        my inbox is always open. I'll get back to you as soon as possible.
-                    </p>
+                    <p class="contact-intro">Whether you have a project in mind, a job opportunity, or just want to connect — my inbox is always open. I'll get back to you as soon as possible.</p>
                     <div class="contact-links">
-                        <a href="mailto:khozabayanda50@gmail.com" class="contact-card">
-                            <div class="contact-card-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <span class="contact-card-label">Email</span>
-                                <span class="contact-card-value">khozabayanda50@gmail.com</span>
-                            </div>
-                            <i class="fas fa-arrow-right contact-arrow"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/bayanda-khoza-579b58364" target="_blank" class="contact-card">
-                            <div class="contact-card-icon linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </div>
-                            <div>
-                                <span class="contact-card-label">LinkedIn</span>
-                                <span class="contact-card-value">Bayanda Khoza</span>
-                            </div>
-                            <i class="fas fa-arrow-right contact-arrow"></i>
-                        </a>
-                        <a href="https://github.com/NextGenBK" target="_blank" class="contact-card">
-                            <div class="contact-card-icon github">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div>
-                                <span class="contact-card-label">GitHub</span>
-                                <span class="contact-card-value">NextGenBK</span>
-                            </div>
-                            <i class="fas fa-arrow-right contact-arrow"></i>
-                        </a>
-                        <a href="https://wa.me/27680335266" target="_blank" class="contact-card">
-                            <div class="contact-card-icon whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <span class="contact-card-label">WhatsApp</span>
-                                <span class="contact-card-value">068 033 5266</span>
-                            </div>
-                            <i class="fas fa-arrow-right contact-arrow"></i>
-                        </a>
+                        <a href="mailto:khozabayanda50@gmail.com" class="contact-card"><div class="contact-card-icon"><i class="fas fa-envelope"></i></div><div><span class="contact-card-label">Email</span><span class="contact-card-value">khozabayanda50@gmail.com</span></div><i class="fas fa-arrow-right contact-arrow"></i></a>
+                        <a href="https://www.linkedin.com/in/bayanda-khoza-579b58364" target="_blank" class="contact-card"><div class="contact-card-icon linkedin"><i class="fab fa-linkedin-in"></i></div><div><span class="contact-card-label">LinkedIn</span><span class="contact-card-value">Bayanda Khoza</span></div><i class="fas fa-arrow-right contact-arrow"></i></a>
+                        <a href="https://github.com/NextGenBK" target="_blank" class="contact-card"><div class="contact-card-icon github"><i class="fab fa-github"></i></div><div><span class="contact-card-label">GitHub</span><span class="contact-card-value">NextGenBK</span></div><i class="fas fa-arrow-right contact-arrow"></i></a>
+                        <a href="https://wa.me/27680335266" target="_blank" class="contact-card"><div class="contact-card-icon whatsapp"><i class="fab fa-whatsapp"></i></div><div><span class="contact-card-label">WhatsApp</span><span class="contact-card-value">068 033 5266</span></div><i class="fas fa-arrow-right contact-arrow"></i></a>
                     </div>
                 </div>
                 <div class="contact-right">
                     <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Thabo Nkosi" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="thabo@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Offer">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                        <div class="form-success" id="formSuccess">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Message sent! I'll get back to you soon.</span>
-                        </div>
+                        <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="Thabo Nkosi" required></div>
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="thabo@example.com" required></div>
+                        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Offer"></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
+                        <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i><span>Message sent! I'll get back to you soon.</span></div>
                     </form>
                 </div>
             </div>
@@ -602,9 +638,7 @@
                     <a href="https://wa.me/27680335266" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© <span id="year"></span> Bayanda Khoza. Built with passion in Durban, ZA 🇿🇦</p>
-            </div>
+            <div class="footer-bottom"><p>© <span id="year"></span> Bayanda Khoza. Built with passion in Durban, ZA 🇿🇦</p></div>
         </div>
     </footer>
 

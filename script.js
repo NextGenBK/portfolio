@@ -252,4 +252,41 @@ document.addEventListener('DOMContentLoaded', () => {
     style.textContent = `.nav-link.active:not(.contact-cta) { color: var(--text); }`;
     document.head.appendChild(style);
 
+
+    /* ── Stack Tabs ────────────────────────── */
+    const stackTabs   = document.querySelectorAll('.stack-tab');
+    const stackPanels = document.querySelectorAll('.stack-panel');
+
+    stackTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.tab;
+            stackTabs.forEach(t => t.classList.remove('active'));
+            stackPanels.forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            const panel = document.getElementById('tab-' + target);
+            if (panel) {
+                panel.classList.add('active');
+                panel.querySelectorAll('.prof-fill').forEach(bar => {
+                    bar.style.width = '0';
+                    setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 60);
+                });
+            }
+        });
+    });
+
+    /* ── CV Modal ──────────────────────────── */
+    const cvModal    = document.getElementById('cvModal');
+    const cvBackdrop = document.getElementById('cvBackdrop');
+    const viewCvBtn  = document.getElementById('viewCvBtn');
+    const cvClose    = document.getElementById('cvClose');
+
+    function openCv()  { if (cvModal) { cvModal.classList.add('open');  document.body.style.overflow = 'hidden'; } }
+    function closeCv() { if (cvModal) { cvModal.classList.remove('open'); document.body.style.overflow = ''; } }
+
+    if (viewCvBtn)  viewCvBtn.addEventListener('click', openCv);
+    if (cvClose)    cvClose.addEventListener('click', closeCv);
+    if (cvBackdrop) cvBackdrop.addEventListener('click', closeCv);
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCv(); });
+
 });
